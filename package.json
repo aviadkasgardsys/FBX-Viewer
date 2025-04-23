@@ -11,10 +11,14 @@
   "dependencies": {
     "@react-router/node": "^7.5.0",
     "@react-router/serve": "^7.5.0",
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.5.0"
+    "react-router": "^7.5.0",
+    "three": "^0.175.0",
+    "three-stdlib": "^2.35.15"
   },
   "devDependencies": {
     "@react-router/dev": "^7.5.0",

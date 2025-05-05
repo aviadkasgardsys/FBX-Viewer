@@ -69,14 +69,14 @@ function convertToStandardMaterial(
     // Optionally, you can log or use the specular property.
     // For example, you might decide that a high specular value (if not white)
     // indicates a slightly higher metalness, but many artists set metalness to 0 by default.
-    // if ((oldMaterial as any).specular !== undefined) {
-    //   const specular = (oldMaterial as any).specular;
-    //   console.log("Specular color:", specular.getHexString());
-    //   // In a basic conversion, you might simply set metalness to 0:
-    //   parameters.metalness = 0;
-    // } else {
-    //   parameters.metalness = 0;
-    // }
+    if ((oldMaterial as any).specular !== undefined) {
+      const specular = (oldMaterial as any).specular;
+      console.log("Specular color:", specular.getHexString());
+      // In a basic conversion, you might simply set metalness to 0:
+      parameters.metalness = 0;
+    } else {
+      parameters.metalness = 0;
+    }
 
     return new THREE.MeshStandardMaterial(parameters);
   }
@@ -172,7 +172,7 @@ function FbxViewerWithAnimation() {
         enableDamping
       />
       <Suspense fallback={null}>
-        <FbxModelAnimated url="/models/drone2.fbx" scale={0.02} />
+        <FbxModelAnimated url="/models/drone 4 anim.fbx" scale={0.01} />
       </Suspense>
     </Canvas>
   );
